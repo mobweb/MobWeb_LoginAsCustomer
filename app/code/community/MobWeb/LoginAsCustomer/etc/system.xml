@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <customer>
+            <groups>
+                <password>
+                    <fields>
+                        <mobweb_loginascustomer_passwords translate="label comment" module="mobweb_loginascustomer">
+                            <label>Passwords for logging in as customer</label>
+                            <comment>Enter one password per line. These passwords can then be used to log into any customer account.</comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </mobweb_loginascustomer_passwords>
+                    </fields>
+                </password>
+            </groups>
+        </customer>
+    </sections>
+</config>

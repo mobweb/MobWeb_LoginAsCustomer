@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MobWeb_LoginAsCustomer>
+            <version>0.0.1</version>
+        </MobWeb_LoginAsCustomer>
+    </modules>
+    <global>
+        <helpers>
+            <mobweb_loginascustomer>
+                <class>MobWeb_LoginAsCustomer_Helper</class>
+            </mobweb_loginascustomer>
+        </helpers>
+        <models>
+            <customer>
+                <rewrite>
+                    <customer>MobWeb_LoginAsCustomer_Customer_Model_Customer</customer>
+                </rewrite>
+            </customer>
+        </models>
+    </global>
+</config>
