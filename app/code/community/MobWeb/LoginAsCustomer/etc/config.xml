@@ -12,11 +12,28 @@
             </mobweb_loginascustomer>
         </helpers>
         <models>
+            <mobweb_loginascustomer>
+                <class>MobWeb_LoginAsCustomer_Model</class>
+            </mobweb_loginascustomer>
             <customer>
                 <rewrite>
                     <customer>MobWeb_LoginAsCustomer_Customer_Model_Customer</customer>
+                    <observer>MobWeb_LoginAsCustomer_Model_Observer</observer>
                 </rewrite>
             </customer>
         </models>
+        <events>
+            <customer_customer_authenticated>
+                <observers>
+                    <customer_upgrade_password>
+                        <type>disabled</type>
+                    </customer_upgrade_password>
+                    <mobweb_loginascustomer_customer_upgrade_password>
+                        <class>MobWeb_LoginAsCustomer_Model_Observer</class>
+                        <method>actionUpgradeCustomerPassword</method>
+                    </mobweb_loginascustomer_customer_upgrade_password>
+                </observers>
+            </customer_customer_authenticated>
+        </events>
     </global>
 </config>

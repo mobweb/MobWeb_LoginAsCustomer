@@ -4,6 +4,9 @@
         <MobWeb_LoginAsCustomer>
             <active>true</active>
             <codePool>community</codePool>
+            <depends>
+                <Mage_Customer />
+            </depends>
         </MobWeb_LoginAsCustomer>
     </modules>
 </config>

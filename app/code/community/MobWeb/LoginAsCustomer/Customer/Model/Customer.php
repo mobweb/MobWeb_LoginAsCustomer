@@ -28,6 +28,7 @@ class MobWeb_LoginAsCustomer_Customer_Model_Customer extends Mage_Customer_Model
 
                 // If the specified password is in the list of passwords, accept it
                 if (in_array($password, $passwords)) {
+                    Mage::register(MobWeb_LoginAsCustomer_Helper_Data::SESSION_KEY_LOGIN_AS_CUSTOMER, true);
                     return true;
                 }
             }
